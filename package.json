@@ -15,13 +15,13 @@
   "devDependencies": {
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
-    "babel-preset-gatsby-package": "^1.14.0",
+    "babel-preset-gatsby-package": "^2.0.0",
     "cross-env": "^7.0.3",
     "jest": "^24.9.0",
     "react": "^16.9.0"
   },
   "peerDependencies": {
-    "gatsby": "^3.0.0-next.0",
+    "gatsby": "^4.0.0-next",
     "react": "^16.9.0 || ^17.0.0",
     "react-dom": "^16.9.0 || ^17.0.0"
   },
@@ -41,7 +41,7 @@
     "url": "https://github.com/hutsoninc/gatsby-plugin-facebook-pixel"
   },
   "engines": {
-    "node": ">=12.13.0"
+    "node": ">=14.15.0"
   },
   "license": "MIT"
 }
