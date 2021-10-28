@@ -5,8 +5,9 @@ exports.onRenderBody = ({ setHeadComponents }, pluginOptions) => {
     (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test') ||
     pluginOptions.pixelId === undefined
   ) {
-    return
+    return null
   }
+  
   return setHeadComponents([
     <script
       key='gatsby-plugin-facebook-pixel'

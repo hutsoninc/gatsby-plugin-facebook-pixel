@@ -1,6 +1,6 @@
-exports.onRouteUpdate = function () {
-  if (process.env.NODE_ENV !== 'production' || typeof fbq !== 'function') {
-    return
+exports.onRouteUpdate = () => {
+  if (process.env.NODE_ENV !== 'production' || typeof window.fbq !== 'function') {
+    return null
   }
 
   // Wrap inside a timeout to make sure react-helmet is done with its changes (https://github.com/gatsbyjs/gatsby/issues/11592)
@@ -8,7 +8,7 @@ exports.onRouteUpdate = function () {
     window.fbq('track', 'PageView')
   }
 
-  if (typeof window.requestAnimationFrame === 'function') {
+  if ('requestAnimationFrame' in window) {
     requestAnimationFrame(() => {
       requestAnimationFrame(trackPageView)
     })
@@ -16,4 +16,6 @@ exports.onRouteUpdate = function () {
     // Simulate 2 requestAnimationFrame calls
     setTimeout(trackPageView, 32)
   }
+
+  return null
 }
