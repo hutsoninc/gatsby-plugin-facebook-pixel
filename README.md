@@ -2,7 +2,7 @@
 
 [![Current npm package version](https://img.shields.io/npm/v/@hutsoninc/gatsby-plugin-facebook-pixel.svg)](https://www.npmjs.com/package/@hutsoninc/gatsby-plugin-hubspot) 
 
-A Gatsby plugin to easily add a Facebook Pixel embed code to your site.
+Gatsby plugin to add a Facebook Pixel to your site.
 
 ## Installation
 
@@ -15,9 +15,9 @@ A Gatsby plugin to easily add a Facebook Pixel embed code to your site.
 module.exports = {
   plugins: [
     {
-      resolve: "@hutsoninc/gatsby-plugin-facebook-pixel",
+      resolve: '@hutsoninc/gatsby-plugin-facebook-pixel',
       options: {
-          pixelId: "YOUR_PIXEL_ID",
+          pixelId: 'YOUR_PIXEL_ID',
       },
     },
   ]
@@ -30,7 +30,7 @@ This plugin provides a [`fbq` function](https://developers.facebook.com/docs/fac
 
 To use it, simply import it and use it like the normal [`fbq` function](https://developers.facebook.com/docs/facebook-pixel/reference#standard-events).
 
-```
+```js
 import { fbq } from '@hutsoninc/gatsby-plugin-facebook-pixel'
 
 fbq('track', 'Contact')
